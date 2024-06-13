@@ -5,6 +5,7 @@ pipeline {
             steps {
                 sh 'mvn -B -DskipTests clean package -Denforcer.skip=true' 
             }
+        }
         stage('Test') {
             steps {
                 sh 'mvn test'
@@ -17,5 +18,3 @@ pipeline {
         }
     }
 }
-}
-
